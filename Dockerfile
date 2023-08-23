@@ -3,6 +3,9 @@ FROM python:3.11.4
 USER root
 WORKDIR /app
 
+RUN apt-get update
+RUN apt-get install -y libgl1-mesa-dev
+
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 RUN pip install poetry
